@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - Goddy Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (SAME) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Goddy Store</a>
+            <div class="nav-menu">
+                <a href="products.html">Products</a>
+                <a href="promotions.html">Promotions</a>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="btn-login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PROMOTIONS CONTENT (DIFFERENT) -->
+    <div class="promotions-header">
+        <h1>Special Offers & Promotions</h1>
+        <p>Limited time deals just for you!</p>
+    </div>
+
+    <div class="promotions-container">
+        <!-- Flash Sale -->
+        <div class="promotion-card flash-sale">
+            <div class="promotion-badge">FLASH SALE</div>
+            <h2>50% OFF All Demo Products</h2>
+            <p>Limited time offer! Use code: <strong>DEMO50</strong></p>
+            <div class="countdown">
+                <h4>Offer ends in:</h4>
+                <div class="timer">
+                    <span id="hours">24</span>h 
+                    <span id="minutes">00</span>m 
+                    <span id="seconds">00</span>s
+                </div>
+            </div>
+            <a href="products.html" class="btn-primary">Shop Now</a>
+        </div>
+
+        <!-- Bundle Offer -->
+        <div class="promotion-card bundle-offer">
+            <div class="promotion-badge">BUNDLE</div>
+            <h2>Buy 2 Get 1 Free</h2>
+            <p>Purchase any 2 demo products and get the 3rd one free!</p>
+            <ul>
+                <li>✓ Valid on all products</li>
+                <li>✓ Free shipping included</li>
+                <li>✓ Limited time only</li>
+            </ul>
+            <a href="products.html" class="btn-primary">View Products</a>
+        </div>
+
+        <!-- Free Shipping -->
+        <div class="promotion-card free-shipping">
+            <div class="promotion-badge">FREE SHIPPING</div>
+            <h2>Free Shipping Worldwide</h2>
+            <p>No minimum purchase required!</p>
+            <p><i class="fas fa-globe"></i> Available in all countries</p>
+            <p><i class="fas fa-clock"></i> 3-5 business days delivery</p>
+            <a href="cart.html" class="btn-primary">Checkout Now</a>
+        </div>
+
+        <!-- New Customer -->
+        <div class="promotion-card new-customer">
+            <div class="promotion-badge">NEW CUSTOMER</div>
+            <h2>20% Off First Order</h2>
+            <p>New to our store? Get 20% off your first purchase!</p>
+            <p>Use code: <strong>WELCOME20</strong></p>
+            <a href="login.html" class="btn-primary">Create Account</a>
+        </div>
+
+        <!-- Seasonal Sale -->
+        <div class="promotion-card seasonal">
+            <div class="promotion-badge">SEASONAL</div>
+            <h2>End of Season Clearance</h2>
+            <p>Up to 70% off selected demo items</p>
+            <div class="discount-badge">70% OFF</div>
+            <a href="products.html" class="btn-primary">View Sale Items</a>
+        </div>
+
+        <!-- Loyalty Program -->
+        <div class="promotion-card loyalty">
+            <div class="promotion-badge">LOYALTY</div>
+            <h2>Earn Demo Points</h2>
+            <p>Join our loyalty program and earn points on every purchase!</p>
+            <ul>
+                <li>1 point for every $1 spent</li>
+                <li>Redeem points for discounts</li>
+                <li>Exclusive member offers</li>
+            </ul>
+            <a href="login.html" class="btn-primary">Join Now</a>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Simple countdown timer for promotions page
+        function updateCountdown() {
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            // Demo countdown - always shows 24 hours
+            hours.textContent = '24';
+            minutes.textContent = '00';
+            seconds.textContent = '00';
+        }
+        
+        // Update every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
